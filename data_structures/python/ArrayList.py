@@ -49,7 +49,7 @@ class ArrayList(object):
         if (self.size == self.capacity):
             self.grow(self.size)
 
-        self[size] = element   
+        self[self.size] = element   
         self.size += 1 
         return True
     
@@ -85,7 +85,7 @@ class ArrayList(object):
             self.list[i] = self.list[i+1]
 
         self.size -= 1
-        if (self.size < capacity/4):
+        if (self.size < self.capacity/4):
             self.shrink()
 
         return removedElement
