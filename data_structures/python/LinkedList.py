@@ -76,8 +76,23 @@ class SingleyLinkedList(object):
             if (i == index-1):
                 prev = curr
             elif (i == index):
-                node = curr
+                data = curr.data
                 prev.next = curr.next
                 self.size -= 1
-                return node.data
+                return data
             curr = curr.next
+    def get(self, index):
+        if (0 > index or index >= self.size):
+            return None
+        curr = self.head
+        for i in range(index):
+            curr = curr.next
+        return curr.data
+
+    def set(self, index, elem):
+        if (0 > index or index >= self.size):
+            return None
+        curr = self.head
+        for i in range(index):
+            curr = curr.next
+        curr.data = elem
