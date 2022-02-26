@@ -99,7 +99,7 @@ class ArrayList(object):
         self.remove(index)
         return True
 
-    def setIndex(self, index, element):
+    def assign(self, index, element):
         if (0 > index or index >= self.size):
             return None
 
