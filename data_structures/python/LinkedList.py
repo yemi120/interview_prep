@@ -133,7 +133,7 @@ class DoubleyLinkedList(object):
             self.tail = self.tail.prev
             self.tail.next = None
             self.size -= 1
-            return headData
+            return tailData
     
     def size(self):
         return self.size
