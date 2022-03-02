@@ -75,7 +75,7 @@ class BinaryTreeNode(object):
         else:
             max = self.getRight().getMaxNode()
             if (max.getData() == self.getRight().getData()):
-                self.setRight = None
+                self.setRight(max.getLeft())
             return max
 
     def BSTRemove(self, elem):
