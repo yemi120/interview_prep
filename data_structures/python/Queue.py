@@ -1,8 +1,8 @@
-from LinkedList import SingleyLinkedList
+from LinkedList import DoubleyLinkedList
 
 class Queue(object):
     def __init__(self):
-        self.list = SingleyLinkedList()
+        self.list = DoubleyLinkedList()
         return
     
     def enqueue(self, elem):

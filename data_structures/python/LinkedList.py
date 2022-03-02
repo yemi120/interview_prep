@@ -143,13 +143,9 @@ class DoubleyLinkedList(object):
             self.addFirst(elem)
             return
 
-        curr = self.head
-        while (curr.next != None):
-            curr = curr.next
-
-        # Curr.next == None => end of list
-        node = Node(elem, None, curr)
-        curr = curr.next
+        node = Node(elem, self.tail, None)
+        self.tail.next = node
+        self.tail = node
         size += 1
 
     def add(self, index, elem):
